@@ -1,5 +1,10 @@
 #include "../Object/robot.ch"
 
+void one();
+void two();
+void three();
+void four();
+
 Robot::defaultR = 1.75;
 Robot::defaultTW = 3.69;
 
@@ -9,16 +14,21 @@ Robot robot3 = Robot(4);
 Robot robot4 = Robot(4);
 
 void one(){
-    robot1.driveDistance(15);
+    robot1.driveForeverNB();
+    robot2.onBump(two);
 }
 
 void two(){
-    robot2.driveDistance(15);
+    robot2.driveForeverNB();
+    robot3.onBump(three);
 }
 
 void three(){
-    robot3.turnRight();
-    robot3.driveDistance(3);
+    robot1.holdJoints();
+    robot2.holdJoints();
+    
+    // robot3.turnRight();
+    // robot3.driveDistance(3);
 }
 
 void four() {
@@ -33,6 +43,7 @@ void four() {
 
 
 int main() {
-    robot2.driveDistance(6);
+    // robot1.connect("81ZL")
+    one();
 }
 
