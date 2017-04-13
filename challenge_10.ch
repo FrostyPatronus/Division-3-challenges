@@ -14,36 +14,34 @@ Robot robot3 = Robot(4);
 Robot robot4 = Robot(4);
 
 void one(){
-    robot1.driveForeverNB();
-    robot2.onBump(two);
+    robot1.driveDistance(12);
 }
 
 void two(){
-    robot2.driveForeverNB();
-    robot3.onBump(three);
+    robot1.driveDistanceNB(13);
+    robot2.driveDistance(13);
+
 }
 
 void three(){
-    robot1.holdJoints();
-    robot2.holdJoints();
+    robot3.turnRightNB();
+    robot4.turnRight();
     
-    // robot3.turnRight();
-    // robot3.driveDistance(3);
+    robot3.driveDistanceNB(6);
+    robot4.driveDistance(6);
+
+
 }
 
 void four() {
-    robot4.turnRight(93);
-    robot4.driveDistance(13);
-    robot4.turnLeft(93);
-    robot4.driveDistance(3);
-    robot4.turnRight(93);
-    
-    robot4.driveDistance(20);
+    // robot4.driveDistance(-8);
 }
 
 
 int main() {
-    // robot1.connect("81ZL")
-    one();
+    // one();
+    // two();
+    three();
+    four();
 }
 

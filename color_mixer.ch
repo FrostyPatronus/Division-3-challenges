@@ -6,15 +6,18 @@ Robot::defaultTW = 3.69;
 Robot robot1 = Robot(3);
 Robot robot2 = Robot(3);
 
-array string_t colors[8][3] = {
-    {"red", "blue", "purple"},
+array string_t colors[11][3] = {
+    {"black", "white", "grey"},
+    {"red", "blue", "violet"},
     {"yellow", "red", "orange"},
     {"red", "green", "yellow"},
     {"red", "blue", "magenta"},
     {"green", "blue", "cyan"},
     {"yellow", "magenta", "red"},
     {"cyan", "magenta", "blue"},
-    {"yellow", "cyan", "green"}
+    {"yellow", "cyan", "green"},
+    {"red", "green", "brown"},
+    {"white", "red", "pink"},
 };
 
 int main(){
@@ -51,7 +54,6 @@ int main(){
                 player = 2;
             else
                 player = 1;
-
         }
     }
 }
